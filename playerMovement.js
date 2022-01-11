@@ -1,0 +1,11 @@
+AFRAME.registerComponent('player-movement',{
+    init:function(){this.toWalk()},
+    toWalk:function(){
+        window.addEventListener('keydown',e=>{
+            if(e.key==='ArrowUp'||e.key==='ArrowDown'||e.key==='ArrowLeft'||e.key==='ArrowRight'){
+                soundEl=document.querySelector('#sound2')
+                soundEl.components.sound.playSound()
+            }
+        })
+    },
+})
